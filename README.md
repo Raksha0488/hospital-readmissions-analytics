@@ -30,13 +30,13 @@ Full analysis with code and output:
 ## Key Findings
 Out of the 101,766 admissions, 11.16% (11,357 patients) were readmitted 
 within 30 days. My first model gave 88.7% accuracy which looked great at 
-first, but I realized this number was basically useless — since only ~11% 
+first, but I realized this number was basically useless, since only ~11% 
 of patients actually get readmitted, a model that just predicts "not 
 readmitted" every single time would already score close to 88-89% without 
 learning anything at all. So I fixed this by making the model pay more 
 attention to the minority (readmitted) cases instead of just optimizing 
 for overall accuracy. This dropped accuracy to around 50%, but the model 
-got way better at actually catching real at-risk patients — going from 
+got way better at actually catching real at-risk patients going from 
 catching almost none to correctly flagging about 59% of them, though it 
 also flagged more false alarms in the process. Number of diagnoses and 
 length of hospital stay ended up being the strongest predictors of 
